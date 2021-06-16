@@ -1,0 +1,143 @@
+:root{
+    --primary-magenta:hsl(300,43%,22%);
+    --primary-pink:hsl(333,80%,67%);
+    --neutral-magenta:hsl(303,10%,53%);
+    --neutral-light-magenta:hsl(300,24%,96%);
+    --white:hsl(0,0%,100%);
+    --rating-offset:50px;
+    --card-offset:20px;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "spartan", sans-serif;
+}
+body{
+    font-size: 15px;
+}
+
+#app{
+    padding: 5% 10%;
+    min-height: 100vh;
+    display: grid;
+}
+
+
+div.top,
+div.reviews{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.intro, .rating{
+    flex:1;
+}
+
+.intro h1{
+    font-size: 3rem;
+    color: var(--primary-magenta);
+}
+
+.intro{
+    padding-right: 100px;
+
+
+}
+.intro p{
+    color: var(---neutral-magenta);
+    padding:20px 30% 20px 0px ;
+}
+
+/* styling 4 rating */
+.rating .block{
+    display: flex;
+   
+    align-items: center;
+    width: 380px;
+    max-width: 100%;
+    padding: 5px;
+    background-color: var(--neutral-light-magenta);
+    margin: 30px 0px;
+    position: relative;
+}
+.rating .block.text{
+    color: var(--primary-magenta);
+    font-weight: 700;
+    flex: 1;
+    padding-left: 30px;
+    flex-wrap: nowrap;
+}
+
+.rating .block:nth-child(2){
+left: var(--rating-offset);
+}
+
+.rating .block:nth-child(3){
+    left:calc(var(--rating-offset) *2);
+
+}
+
+.reviews .card{
+
+    background-color: var(--primary-magenta);
+
+    color: var(--white);
+    border-radius: 10px;
+    height: 250px;
+    padding: 30px;
+    position: relative;
+    flex: 1 0 320px;
+}
+.reviews .card:not(:last-child){
+    margin-right:30px;
+}
+.reviews .card .profile .image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.reviews .card .profile .image img{
+    width: 100%;
+}
+
+.reviews .card .profile .details p.verified{
+    font-weight: 400;
+    color: var(--primary-pink);
+}
+
+.reviews .card .comment{
+    margin: 20px 0px;
+}
+ 
+.reviews .card .profile .details p{
+    font-weight: 500;
+}
+.reviews .card:nth-child(2){
+    top: var(--card-offset);
+    }
+
+.reviews .card:nth-child(3){
+    top: calc(var(--card-offset)*2);
+}
+
+
+.reviews .card .profile {
+    display: flex;
+    align-items: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  
+  margin-top: 5px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
